@@ -1,0 +1,3 @@
+loci	allele	percDiff	match	snp	ins	del	percSnp	percCover	refLen	call
+BME_RS13425	1	0	166	0	0	0	0	98.8	168	I
+BME_RS13745	1	0	493	0	0	0	0	98.99	498	I
