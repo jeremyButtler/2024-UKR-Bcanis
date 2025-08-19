@@ -79,6 +79,8 @@ Publication: Abdel-Glil MY, Thomas P, Brandt C,
   - Date: 20240919
   - ONT Library Kit: RBK114.24 V14 chem RB Rapid Barcoding
     Kit
+  - Basecalling: I suspect was with high accuracy
+    model on guppy version 6
 
 # 02 assembly
 
