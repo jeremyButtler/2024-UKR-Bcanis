@@ -89,6 +89,8 @@ The original fastq files came from two separate runs. They
   of this document we will refere to it
   as `01-input/merged-reads.fq`.
 
+The SRA accesion is `SRR34995076`.
+
 Raven was used to assemble the genomes.
 
 ```
