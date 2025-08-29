@@ -41,6 +41,111 @@
 }
 
 />>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\
+^ flye references
+^   - note: not including metagnomic reference since we
+^     did not use meta flye
+\>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>/
+
+@Article{2019-pmid-30936562-flye,
+  Title={
+    Assembly of long, error-prone reads using repeat
+    graphs.
+  },
+  Author={
+    Kolmogorov, Mikhail and Yuan, Jeffrey and Lin, Yu and
+    Pevzner, Pavel A
+  },
+  Journal={Nature biotechnology},
+  JournalId={9604648},
+  Year={2019},
+  Month={May},
+  Volume={37},
+  Number={5},
+  Pages={540-546},
+  doi={10.1038/s41587-019-0072-8},
+  url={https://dx.doi.org/10.1038/s41587-019-0072-8},
+  ISSN={1087-0156},
+  PMID={30936562},
+  File={2019-pmid-30936562.pdf},
+  Supplement={},
+  Tags={},
+  Keywords={},
+  NotesP={
+  },
+  Abstract={
+    Accurate genome assembly is hampered by repetitive
+    regions. Although long single molecule sequencing
+    reads are better able to resolve genomic repeats than
+    short-read data, most long-read assembly algorithms
+    do not provide the repeat characterization necessary
+    for producing optimal assemblies. Here, we present
+    Flye, a long-read assembly algorithm that generates
+    arbitrary paths in an unknown repeat graph, called
+    disjointigs, and constructs an accurate repeat graph
+    from these error-riddled disjointigs. We benchmark
+    Flye against five state-of-the-art assemblers and
+    show that it generates better or comparable
+    assemblies, while being an order of magnitude faster.
+    Flye nearly doubled the contiguity of the human
+    genome assembly (as measured by the NGA50 assembly
+    quality metric) compared with existing assemblers.
+  },
+}
+
+@Article{2016-pmid-27956617-flye,
+  Title={
+    Assembly of long error-prone reads using de Bruijn
+    graphs.
+  },
+  Author={
+    Lin, Yu and Yuan, Jeffrey and Kolmogorov, Mikhail and
+    Shen, Max W and Chaisson, Mark and
+    Pevzner, Pavel A
+  },
+  Journal={
+    Proceedings of the National Academy of Sciences of
+    the United States of America
+  },
+  JournalId={7505876},
+  Year={2016},
+  Month={Dec},
+  Day={27},
+  Volume={113},
+  Number={52},
+  Pages={E8396-E8405},
+  doi={10.1073/pnas.1604560113},
+  url={https://dx.doi.org/10.1073/pnas.1604560113},
+  ISSN={0027-8424},
+  PMID={27956617},
+  PMC={PMC5206522},
+  File={2016-pmid-27956617.pdf},
+  Supplement={},
+  Tags={},
+  Keywords={
+    de Bruijn graph, genome assembly,
+    single-molecule sequencing
+  },
+  NotesP={
+  },
+  Abstract={
+    The recent breakthroughs in assembling long
+    error-prone reads were based on the
+    overlap-layout-consensus (OLC) approach and did not
+    utilize the strengths of the alternative de Bruijn
+    graph approach to genome assembly. Moreover, these
+    studies often assume that applications of the de
+    Bruijn graph approach are limited to short and
+    accurate reads and that the OLC approach is the only
+    practical paradigm for assembling long error-prone
+    reads. We show how to generalize de Bruijn graphs for
+    assembling long error-prone reads and describe the
+    ABruijn assembler, which combines the de Bruijn graph
+    and the OLC approaches and results in accurate genome
+    reconstructions.
+  },
+}
+
+/>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\
 ^ minimap2 references
 \>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>/
 
@@ -182,6 +287,18 @@
     facilitate cutting edge navigation of genomic
     relationships among bacterial pathogens.
   },
+}
+
+/>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\
+^ figTree references (as best as can do)
+\>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>/
+
+@misc{figTree,
+   Author = {Rambaut, Andrew},
+   Title = {FigTree},
+   howpublished={/url{http://tree.bio.ed.ac.uk/software/figtree/}},
+   note = {github https://github.com/rambaut/figtree},
+   note = {Version 1.4.5 pre-release downloaded 2025-08-12}
 }
 
 />>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\
