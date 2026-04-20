@@ -113,6 +113,7 @@ Publication: Abdel-Glil MY, Thomas P, Brandt C,
     Kit
   - Basecalling: I suspect was with high accuracy
     model on guppy version 6
+    - was: r10.4.1_e8.2_400bps_hac@v4.3.0
 
 The fastq data for this analysis is under SRA accession
   SRR34995076.
