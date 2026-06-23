@@ -568,7 +568,7 @@ grapetree \
 
 I made a minimum spanning cgMLST using the reference
   database and grapetree. The output `.newick` was
-  converted to an image using XXX.
+  converted to an image using figtree.
 
 First I needed to prepare the database for grape tree. I
   did this by coping the Raven
