@@ -91,7 +91,7 @@ Z Zhou, NF Alikhan, MJ Sergeant, N Luhmann, C Vaz,
    relationships among 100,000 bacterial pathogens",
    Genome Res; doi: https://doi.org/10.1101/gr.232397.117
 
-## Rimsphere database
+## Rimdom database
 
 Publication: Abdel-Glil MY, Thomas P, Brandt C,
   Melzer F, Subbaiyan A, Chaudhuri P, Harmsen D,
@@ -101,9 +101,9 @@ Publication: Abdel-Glil MY, Thomas P, Brandt C,
   Surveillance of Pathogenic Brucella.
   J Clin Microbiol. 2022, 60: e0031122
   [PubMed 35852343]
-
-[https://www.cgmlst.org/ncs/schema/Brucella2114/](
- https://www.cgmlst.org/ncs/schema/Brucella2114/).
+  
+[https://www.cgmlst.org/ncs/schema/schema/Brucella/](
+ https://www.cgmlst.org/ncs/schema/schema/Brucella/)
 
 # sequencing notes
 
