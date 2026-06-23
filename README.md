@@ -1,12 +1,16 @@
 # Use:
 
 Describe steps used to get the *B. canis* genomes from
-  the 2024 Ukraine fastq files.
+  the 2024 Ukraine fastq files. The final assembly was
+  made using flye.
 
 # Tools used:
 
 - versions:
   - other peoples programs
+    - NanoStat 1.6.0
+      - [https://github.com/wdecoster/nanostat](
+         https://github.com/wdecoster/nanostat)
     - raven: 1.8.3
       - [https://github.com/lbcb-sci/raven](
          https://github.com/lbcb-sci/raven)
@@ -33,6 +37,15 @@ Describe steps used to get the *B. canis* genomes from
 The `references.bibtex` file has all references in bibtex
   format. The only exception is Phylo.io veiwer, which I
   could not find a reference for.
+
+## nanostat
+
+Wouter De Coster, Svenn D’Hert, Darrin T Schultz, Marc Cruts,
+  Christine Van Broeckhoven, NanoPack: visualizing and processing
+  long-read sequencing data, Bioinformatics, Volume 34, Issue 15,
+  August 2018, Pages 2666–2669,
+  [https://doi.org/10.1093/bioinformatics/bty149](
+   https://doi.org/10.1093/bioinformatics/bty149)
 
 ## Phylo tree
 
@@ -118,6 +131,26 @@ Publication: Abdel-Glil MY, Thomas P, Brandt C,
 The fastq data for this analysis is under SRA accession
   SRR34995076.
 
+
+# read stats
+
+```
+fastq-dump SRR34995076;
+```
+
+```
+Nanostat --in SRR34995076.fastq
+```
+
+| read metric         | number reads |
+|:--------------------|:-------------|
+| Number of reads     | 252,803.0    |
+| Mean read quality   |      10.8    |
+| Median read quality |      10.6    |
+| Mean read length    |   1,287.8    |
+| Median read length  |     658.0    |
+| Read length N50     |   2,471.0    |
+
 # 02 assembly
 
 The original fastq files came from two separate runs. They
@@ -133,7 +166,7 @@ Raven was used to assemble the genomes.
 
 ```
 raven \
-    data_from_SRA.fastq \
+    SRR34995076.fastq \
   > 02-raven/02-BG_EMBS-bar08_11.fa;
 ```
 
@@ -143,7 +176,7 @@ Later on I changed this from Raven to flye. I also
   adjusted the genome to be circular.
 
 ```
-flye --nano-raw data_from_SRA.fastq --out-dir 02-flye;
+flye --nano-raw SRR34995076.fastq --out-dir 02-flye;
 mv 02-flye/assembly.fasta 02-BG_EMBS-bar08_11-flye.fa;
 rm -r 02-flye/*; # remove extra files flye makes
 mv 02-BG_EMBS-bar08_11-flye.fa 02-flye;
@@ -197,7 +230,7 @@ We also identified which chromosomes the contigs belong to
 minimap2 \
     -a \
     <(head -n 2 02-raven/02-BG_EMBS-bar08_11.fa) \
-    01-input/merged-reads.fq |
+    SRR34995076.fastq |
   tbCon \
     -sam - \
     -perc-snp-sup 0.3 \
@@ -214,7 +247,7 @@ minimap2 \
 minimap2 \
     -a \
     del.fasta \
-    01-input/merged-reads.fq |
+    SRR34995076.fastq |
   tbCon \
     -sam - \
     -perc-snp-sup 0.3 \
@@ -235,7 +268,7 @@ rm del.fasta;
 minimap2 \
     -a \
     <(tail -n 2 02-raven/02-BG_EMBS-bar08_11.fa) \
-    01-input/merged-reads.fq |
+    SRR34995076.fastq |
   tbCon \
     -sam - \
     -perc-snp-sup 0.3 \
